@@ -1,9 +1,2 @@
-{% if latest_article_list %}
-	<ul>
-	{% for article in latest_article_list %}
-		<li><a href="{% url 'news:detail' article.id %}">{{ article.headline }}</a></li>
-	{% endfor %}
-	</ul>
-{% else %}
-	<p>No articles are available.</p>
-{% endif %}
+{% load news_extras %}
+{% show_feed %}
