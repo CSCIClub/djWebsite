@@ -1,0 +1,5 @@
+<ul>
+{% for article in latest_article_list %}
+  <li><a href="{% url 'news:detail' article.id %}">{{ article.headline }}</a></li>
+{% endfor %}
+</ul>

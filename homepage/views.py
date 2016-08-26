@@ -1,9 +1,6 @@
 from django.shortcuts import render
+import news.views
 
 # Create your views here.
 def index(request):
-
-	context = {
-		# 'latest_article_list': latest_article_list,
-	}
-	return render(request, 'homepage/index.html', context)
+    return render(request, 'homepage/index.html', {})
