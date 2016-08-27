@@ -1,0 +1,147 @@
+{% load news_extras %}
+{% load navbar_extras %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <title>Calendar</title>
+
+   <!-- Bootstrap -->
+   <link href="{% static 'global/css/bootstrap.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+   <script type="text/javascript" src="{% static 'global/js/bootstrap.js' %}"></script>
+
+   <div class="container">
+       <!-- header -->
+       <div class="row">
+           <div class="col-md-12">
+               <div class="row">
+                   <div class="col-xs-2">
+                       <img src="{% static 'global/images/SCSU_puppy_logo.png'%}" class="img-responsive" />
+                   </div>
+                   <div class="col-md-8 col-xs-8">
+                       <div class="jumbotron">
+                           <h2>SCSU Computer Science Club</h2>
+                           <br>
+                           <h3>SCSU's ACM Chapter</h3>
+                       </div>
+                   </div>
+                   <div class="col-xs-2">
+                       <img src="{% static 'global/images/computer.jpg'%}" class="img-responsive" />
+                   </div>
+               </div>
+           </div>
+
+       </div>
+       <!-- End of header -->
+       <!-- breadcrumb TODO: can we do this breadcrumb dynamically?
+     <ol class="breadcrumb">
+       <li><a href="#">Home</a></li>
+     </ol>
+      End of breadcrumb -->
+
+       <!-- Navbar -->
+       {% show_navbar %}
+       <!-- End of Navbar -->
+       <!-- Body -->
+
+           <div class="col-md-6">
+               <div class="row">
+                 <div class="col-xs-12">
+                   <div class="panel panel-primary">
+                       <div class="panel-heading">
+                           <h3 class="panel-title">Hard Coded Temporary Calendar</h3>
+                       </div>
+                       <div class="panel-body">
+                           8/26/2016 - Welcome Back/Website/potluck
+                       </div>
+                       <div class="panel-body">
+                           9/2/2016 - Jeapordy/Pizza
+                       </div>
+                       <div class="panel-body">
+                           9/9/2016 - 
+                       </div>
+                       <div class="panel-body">
+                           9/16/2016 -
+                       </div>
+                       <div class="panel-body">
+                           9/23/2016
+                       </div>
+                       <div class="panel-body">
+                           9/30/2016
+                       </div>
+                       <div class="panel-body">
+                           10/7/2016
+                       </div>
+                       <div class="panel-body">
+                           10/14/2016
+                       </div>
+                       <div class="panel-body">
+                           10/21/2016
+                       </div>
+                       <div class="panel-body">
+                           10/28/2016
+                       </div>
+                       <div class="panel-body">
+                           11/4/2016
+                       </div>
+                       <div class="panel-body">
+                           11/11/2016
+                       </div>
+                       <div class="panel-body">
+                           11/18/2016
+                       </div>
+                       <div class="panel-body">
+                           11/25/2016
+                       </div>
+                       <div class="panel-body">
+                           12/2/2016
+                       </div>
+                       <div class="panel-body">
+                           12/9/2016
+                       </div>
+                       <div class="panel-body">
+                           12/16/2016
+                       </div>
+
+                   </div>
+                 </div>
+               </div>
+           </div>
+       </div>
+
+
+       <!-- End of Body -->
+
+       <!-- Footer -->
+
+
+
+
+       <!-- End of footer -->
+   </div>
+<a href="https://google.com">google.com</a>
+
+</body>
+<footer class="footer">
+ <div class="container">
+   <p class="text-muted">
+   Quote of the day
+ </p>
+ </div>
+</footer>
+</html>

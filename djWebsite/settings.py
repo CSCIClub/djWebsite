@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Calendar.apps.CalendarConfig',
 	'news.apps.NewsConfig',
 	'homepage.apps.HomepageConfig',
 	'navbar.apps.NavbarConfig',
