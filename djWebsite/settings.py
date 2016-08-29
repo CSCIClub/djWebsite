@@ -40,17 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', # django 1.6.2+
-    'django.contrib.humanize',
-    'django_nyt',
-    'mptt',
-    'sekizai',
-    'sorl.thumbnail',
-    'wiki',
-    'wiki.plugins.attachments',
-    'wiki.plugins.notifications',
-    'wiki.plugins.images',
-    'wiki.plugins.macros',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -73,15 +62,10 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.debug',
-                'django.template.context_processors.i18n',
-                'django.template.context_processors.media',
                 'django.template.context_processors.request',
-                'django.template.context_processors.static',
-                'django.template.context_processors.tz',
+                'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                "sekizai.context_processors.sekizai",
             ],
         },
     },
@@ -144,7 +128,3 @@ STATIC_ROOT = '/home/csciclub/djWebsite/static'
 STATICFILES_DIRS = [
     #os.path.join(BASE_DIR, "static/")
 ]
-
-
-#added for wiki
-SITE_ID = 1
