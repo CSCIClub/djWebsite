@@ -16,14 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from wiki.urls import get_pattern as get_wiki_pattern
-from django_nyt.urls import get_pattern as get_nyt_patern
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('homepage.urls')),
     url(r'^Calendar/', include('Calendar.urls')),
     url(r'^news/', include('news.urls', namespace='news')),
-    url(r'notifications/', get_nyt_patern()),
-    url(r'^wiki/', get_wiki_pattern()),
 ]
