@@ -19,6 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('homepage.urls')),
-    url(r'^Calendar/', include('Calendar.urls')),
+    url(r'^calendar/', include('calendar.urls')),
     url(r'^news/', include('news.urls', namespace='news')),
+    url(r'notifications/', get_nyt_patern()),
+    url(r'^wiki/', get_wiki_pattern()),
 ]
