@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -141,6 +141,12 @@ STATIC_URL = '/static/'
 
 #STATIC_ROOT = '/home/csciclub/djWebsite/static'
 
+if (DEBUG):
+    STATICFILES_DIRS = [
+       os.path.join(BASE_DIR, "static")
+    ]
+else:
+    STATIC_ROOT = '/home/csciclub/djWebsite/static'
 
 #added for wiki
 SITE_ID = 1
