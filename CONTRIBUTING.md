@@ -109,9 +109,7 @@ Setting up the django project. Place a random sequence for the SECRET_KEY.
 ```bash
 # This creates a secrets file this is used for security reasons
 echo 'SECRET_KEY = `PUT_A_RANDOM_STRING_HERE`
-      STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static/")
-      ] ' > secret_settings.py
+      DEBUG = True' > secret_settings.py
 
 python manage.py migrate # this builds the database
 python manage.py runserver # this starts the server
