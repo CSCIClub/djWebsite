@@ -141,10 +141,6 @@ STATIC_URL = '/static/'
 
 #STATIC_ROOT = '/home/csciclub/djWebsite/static'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/")
-]
-
 
 #added for wiki
 SITE_ID = 1
