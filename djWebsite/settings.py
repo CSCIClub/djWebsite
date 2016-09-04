@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['csci.club']
 
 
 # Application definition
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'djWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['wiki/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

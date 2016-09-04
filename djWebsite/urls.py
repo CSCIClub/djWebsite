@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^$', include('homepage.urls')),
     url(r'^calendar/', include('calendar.urls', namespace='calendar')),
     url(r'^news/', include('news.urls', namespace='news')),
-    url(r'notifications/', get_nyt_patern()),
+    url(r'^notifications/', get_nyt_patern()),
     url(r'^wiki/', get_wiki_pattern()),
 ]
