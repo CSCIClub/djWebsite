@@ -69,7 +69,7 @@ ROOT_URLCONF = 'djWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['wiki/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
