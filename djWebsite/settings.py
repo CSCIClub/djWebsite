@@ -24,13 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-ALLOWED_HOSTS = ['csci.club']
+ALLOWED_HOSTS = ['.csci.club']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'calendar.apps.CalendarConfig',
+    'cal.apps.CalendarConfig',
 	'news.apps.NewsConfig',
 	'homepage.apps.HomepageConfig',
 	'navbar.apps.NavbarConfig',
