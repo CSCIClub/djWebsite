@@ -152,3 +152,13 @@ else:
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/wiki/'
+
+WIKI_MARKDOWN_KWARGS = {
+    'extensions': [
+        'footnotes',
+        'attr_list',
+        'headerid',
+        'extra',
+        'codehilite',
+    ]
+}
