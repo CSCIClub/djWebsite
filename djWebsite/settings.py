@@ -24,13 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-ALLOWED_HOSTS = ['csci.club']
+ALLOWED_HOSTS = ['.csci.club']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'calendar.apps.CalendarConfig',
+    'cal.apps.CalendarConfig',
 	'news.apps.NewsConfig',
 	'homepage.apps.HomepageConfig',
 	'navbar.apps.NavbarConfig',
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'djWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['wiki/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'wiki/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,3 +152,13 @@ else:
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/wiki/'
+
+WIKI_MARKDOWN_KWARGS = {
+    'extensions': [
+        'footnotes',
+        'attr_list',
+        'headerid',
+        'extra',
+        'codehilite',
+    ]
+}
