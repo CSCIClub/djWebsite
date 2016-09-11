@@ -1,0 +1,8 @@
+hello world
+
+
+<form action="/email/" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Submit" />
+</form>

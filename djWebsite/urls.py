@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^news/', include('news.urls', namespace='news')),
     url(r'^notifications/', get_nyt_patern()),
     url(r'^wiki/', get_wiki_pattern()),
+    url(r'^email/', include('emails.urls', namespace='emails')),
 ]
