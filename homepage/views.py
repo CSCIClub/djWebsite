@@ -4,3 +4,5 @@ import news.views
 # Create your views here.
 def index(request):
     return render(request, 'homepage/index.html', {})
+    #return render(request, 'homepage/base.html', {})
+
