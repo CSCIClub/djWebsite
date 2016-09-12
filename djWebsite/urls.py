@@ -19,11 +19,18 @@ from django.contrib import admin
 from wiki.urls import get_pattern as get_wiki_pattern
 from django_nyt.urls import get_pattern as get_nyt_patern
 
+from homepage.views import about, contact
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('homepage.urls')),
+    url(r'^about/', about, name='about'),
+    url(r'^contact/', contact, name='contact'),
     url(r'^calendar/', include('cal.urls', namespace='cal')),
     url(r'^news/', include('news.urls', namespace='news')),
+    url(r'^email/', include('emails.urls', namespace='emails')),
+    url(r'^events/', include('events.urls', namespace='events')),
+
     url(r'^notifications/', get_nyt_patern()),
     url(r'^wiki/', get_wiki_pattern()),
 ]
