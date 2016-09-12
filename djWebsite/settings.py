@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['.csci.club']
 # Application definition
 
 INSTALLED_APPS = [
+    'events.apps.EventsConfig',
     'emails.apps.EmailsConfig',
     'cal.apps.CalendarConfig',
 	'news.apps.NewsConfig',
