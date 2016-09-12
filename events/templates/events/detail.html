@@ -1,7 +1,8 @@
 {% extends "homepage/base.html" %}
 
 {% block content %}
-<a href="{{ event.url }}"><h1>{{ event.title }}</h1></a>
+<h1>{{ event.title }}</h1>
+<a href="{{event.url}}">{{event.url}}</a>
 <h4>{{ event.location }}</h4>
 <h4>{{ event.date }}</h4>
 {{ event.description }}
