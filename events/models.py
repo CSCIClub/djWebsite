@@ -5,7 +5,9 @@ class Event(models.Model):
     EVENT_TYPE_CHOICES = (
         ('HACKATHON', 'Hackathon'),
         ('CODECOMP',  'Coding Competition'),
-        ('OTHER',     'Other'),
+        ('MEETING',  'Meeting'),
+	('OTHER',     'Other'),
+	
     )
 
     title = models.CharField(max_length=200)

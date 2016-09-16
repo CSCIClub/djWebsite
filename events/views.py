@@ -7,10 +7,13 @@ from django.http import HttpResponse
 from .models import Event
 
 # Create your views here.
-def index(request):
+def index(request, evt_type = ''):
     event_list = [d for d in Event.objects.order_by('-date') if
             (d.end_date and d.end_date >= date.today() ) or
             d.date >= date.today()][::-1]
+    if evt_type != '':
+      event_list = [event for event in event_list if
+        event.event_type == evt_type]
     return render(request, 'events/index.html', {'event_list': event_list})
 
 def detail(request, event_id):
