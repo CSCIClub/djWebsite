@@ -20,3 +20,15 @@ def detail(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
     return render(request, 'events/detail.html', {'event': event})
 
+def game(request):
+    return render(request, 'events/game.html');
+    
+def eventsAjax(request):
+    event_list = [d for d in Event.objects.order_by('-date') if
+            (d.end_date and d.end_date >= date.today() ) or
+            d.date >= date.today()][::-1]
+    return render(request, 'events/eventsAjax.html', {'event_list': event_list})
+
+def upcommingAjax(request):
+    return render(request, 'events/upcommingAjax.html')
+

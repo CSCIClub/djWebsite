@@ -3,6 +3,9 @@ from . import views
 
 app_name = 'events'
 urlpatterns = [
+  url(r'^eventsAjax/', views.eventsAjax, name='eventsAjax'),
+  url(r'^upcommingAjax/', views.upcommingAjax, name='upcommingAjax'),
+  url(r'^game/', views.game, name='game'),
 	url(r'^competitions/', views.index, {'evt_type':'CODECOMP'}, name='index'),
 	url(r'^meetings/', views.index, {'evt_type':'MEETING'}, name='index'),
 	url(r'^hackathons/', views.index, {'evt_type':'HACKATHON'}, name='index'),

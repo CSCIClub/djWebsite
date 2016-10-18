@@ -10,12 +10,16 @@
         <div class="panel-heading">
           <h3 class="panel-title">Upcoming Events</h3>
         </div>
-        {% for event in event_list %}
         <div class="panel-body">
-          {{ event.date }}
-          &nbsp;- &nbsp;<a href="{% url 'events:detail' event.id %}">{{ event.title }}</a>
+          {% for event in event_list %}
+            <div style="padding: 10px">
+            {{ event.date }}
+            &nbsp;- &nbsp;<a href="{% url 'events:detail' event.id %}">{{ event.title }}</a>
+            </div>
+          {% endfor %}
+          
         </div>
-        {% endfor %}
+
       </div>
     </div>
   </div>

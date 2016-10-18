@@ -8,6 +8,9 @@ from .models import Article
 def index(request):
 	return render(request, 'news/index.html', {})
 
+def ajax(request):
+  return render(request, 'news/ajax.html', {})
+
 def detail(request, article_id):
 	article = get_object_or_404(Article, pk=article_id)
 	return render(request, 'news/detail.html', {'article': article})

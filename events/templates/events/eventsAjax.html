@@ -1,0 +1,9 @@
+{% load events_extras %}
+<div class="panel-body">
+{% for event in event_list %}
+  <div style="padding:5px">
+    {{ event.date }}
+    &nbsp;- &nbsp;<a href="{% url 'events:detail' event.id %}">{{ event.title }}</a>
+  </div>
+{% endfor %}
+</div>

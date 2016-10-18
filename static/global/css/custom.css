@@ -1,0 +1,141 @@
+.window-container{
+  position:relative;
+}
+
+.panel-buttons {
+  float: right; 
+}
+.panel-title {
+  padding-right:10px;
+}
+
+.panel.panel-primary{ 
+  position:relative;
+  float:left;
+  margin:10px;
+}
+.abs{
+  position:absolute;
+}
+
+.panel-body {
+  padding:0px;
+}
+
+.panel-body iframe {
+  outline:none;
+  width:100%;
+  height:100%;
+  margin: 0px;
+  padding:0px;
+}
+
+.siteHeaderBox {
+  margin: 0;
+  padding: 20px;
+  background-color: #333;
+}
+
+.taskbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:auto;
+  background-color: #333;
+}
+
+.taskbar::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+.taskbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.taskbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.startmenu {
+  background-color: #222;
+  z-index: 100000;
+  border: 3px solid #333;
+  border-radius: 7px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:auto;
+}
+
+.startmenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:auto;
+}
+
+.menuItem{
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  background-color: #33f;
+}
+
+.taskbar li{
+  float:left;
+  display: block;
+}
+
+.taskbar li div{
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.taskbar li div:hover {
+  background-color: #33f;
+}
+
+.taskbar-menu {
+  border: 2px solid #333;
+  border-radius: 7px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom:1px;
+}
+.taskbar-item {
+  border: 2px solid gray;
+  border-radius: 7px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom:1px;
+}
+
+.panel-close-button {
+  border: 2px solid black;
+  background-color: red;
+  padding: 0px 3px 0px 3px;
+  border-radius: 7px;
+}
+
+.panel-maximize-button {
+  border: 2px solid black;
+  background-color: blue;
+  padding: 0px 3px 0px 3px;
+  border-radius: 7px;
+}
+
+.panel-minimize-button {
+  border: 2px solid black;
+  background-color: green;
+  padding: 0px 4px 0px 4px;
+  border-radius: 7px;
+  font-style: bold;
+  font-size:16px;
+}
+

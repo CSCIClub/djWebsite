@@ -19,3 +19,6 @@ def index(request):
 
 def success(request):
     return render(request, 'emails/success.html', {})
+
+def ajax(request):
+    return render(request, 'emails/ajax.html', {})
