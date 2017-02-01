@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['.csci.club']
 # Application definition
 
 INSTALLED_APPS = [
+    'spacegame',
     'events.apps.EventsConfig',
     'emails.apps.EmailsConfig',
     'cal.apps.CalendarConfig',
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'wiki.plugins.notifications',
     'wiki.plugins.images',
     'wiki.plugins.macros',
+    'channels',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -163,4 +165,14 @@ WIKI_MARKDOWN_KWARGS = {
         'extra',
         'codehilite',
     ]
+}
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+        "ROUTING": "djWebsite.routing.channel_routing",
+    },
 }
