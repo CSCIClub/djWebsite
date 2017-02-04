@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SWEET SPACE LASER GAME</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="{% static 'spacegame/main.css' %}">
+	</head>
+	<body>
+		<div id="blocker">
+			<div id="instructions" style="display:none">
+				<span style="font-size:40px">Press any button to play.</span>
+				<br />
+				(F = Fire, MOUSE = Look around, SPACE = boost)
+			</div>
+			<div id="chooseName">
+				  NAME <input id="nameField" class="nameTextBox" type="text" value="" name="fname">
+				  <button  class="randomizeButton" id="randomizeButton">Randomize</button>
+					<button class="playButton" id="playButton">Play</button>
+					<br /><br/>
+
+					<b>Controls</b>
+					<br/>
+					F = Fire, MOUSE = Look around, SPACE = boost, ESC = free mouse
+
+			</div>
+		</div>
+
+		<div id="deathblocker">
+			<br/>
+			<div id="countdown" style="font-size:40px">-1</div>
+		</div>
+
+		<div id="leaderboard"></div>
+		<div id="log"></div>
+		<div id="boostbar">BOOST!!!!</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+		<script src="{% static 'spacegame/laser.js' %}"></script>
+		<script src="{% static 'spacegame/pointerlock.js' %}"></script>
+		<script src="{% static 'spacegame/util.js' %}"></script>
+		<script src="{% static 'spacegame/game.js' %}"></script>
+
+
+	</body>
+</html>

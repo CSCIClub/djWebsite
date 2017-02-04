@@ -21,6 +21,8 @@ from django_nyt.urls import get_pattern as get_nyt_patern
 
 from homepage.views import about, contact
 
+from spacegame import urls as game_urls
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('homepage.urls')),
@@ -30,7 +32,7 @@ urlpatterns = [
     url(r'^news/', include('news.urls', namespace='news')),
     url(r'^email/', include('emails.urls', namespace='emails')),
     url(r'^events/', include('events.urls', namespace='events')),
-
+    url(r'^spacegame/', include(game_urls)),
     url(r'^notifications/', get_nyt_patern()),
     url(r'^wiki/', get_wiki_pattern()),
 ]
