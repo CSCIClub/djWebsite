@@ -82,7 +82,8 @@ updatePlayers = function (playerJSON){
 				 playerJSON[id].position.x,
 				 playerJSON[id].position.y,
 				 playerJSON[id].position.z,
-				 id
+				 id,
+				 0
 			 );
 
 			//calculate 2d coords ???
