@@ -98,7 +98,7 @@ def ws_message(message):
 				'score': 0,
 				'position': {
 					'x': random.randrange(20),
-					'y': 0,
+					'y': random.randrange(20),
 					'z': random.randrange(20),
 				},
 				'rotation': {
