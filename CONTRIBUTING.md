@@ -5,6 +5,33 @@ Thank you wanting to make the SCSU CSCI Club better!  Please see the
 [wiki](https://github.com/CSCIClub/djWebsite/wiki) for things that need to done or
 simply add something that you think will be awesome.
 
+Quick Start - ubuntu-16.04
+--------------------
+
+```
+sudo apt-get update
+sudo apt-get install git python3 python3-pip python3-virtualenv redis-server
+sudo service redis-server start
+git clone https://github.com/CSCIClub/djWebsite
+cd djWebsite
+
+# setup virtualenv
+python3 -m virtualenv --python=python3 venv
+source venv/bin/activate
+
+# install dependencies
+pip install -r requirements
+
+# create a secrets file
+echo "SECRET_KEY = \"PUT_A_RANDOM_STRING_HERE\"" > secret_settings.py
+echo "DEBUG = True" >> secret_settings.py
+
+# create the table in database
+python manage.py migrate
+
+# run the server
+python manage.py runserver 0.0.0.0:8000
+```
 
 Setting up a dev environment
 ----------------------------

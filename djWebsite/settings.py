@@ -34,9 +34,9 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'emails.apps.EmailsConfig',
     'cal.apps.CalendarConfig',
-	'news.apps.NewsConfig',
-	'homepage.apps.HomepageConfig',
-	'navbar.apps.NavbarConfig',
+    'news.apps.NewsConfig',
+    'homepage.apps.HomepageConfig',
+    'navbar.apps.NavbarConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -147,7 +147,7 @@ STATIC_URL = '/static/'
 
 if (DEBUG):
     STATICFILES_DIRS = [
-       os.path.join(BASE_DIR, "static")
+        os.path.join(BASE_DIR, "static")
     ]
 else:
     STATIC_ROOT = '/home/csciclub/djWebsite/static'
