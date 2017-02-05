@@ -1,72 +1,65 @@
 {% extends "homepage/base.html" %}
 
 {% block content %}
-           <div class="col-md-6">
+           <div class="col-md-6" style="width: 100%">
                <div class="row">
                  <div class="col-xs-12">
-                   <div class="panel panel-primary">
-                       <div class="panel-heading">
-                           <h3 class="panel-title">Hard Coded Temporary Calendar</h3>
-                       </div>
-                       <div class="panel-body">
-                           8/26/2016 - Welcome Back/Website/potluck
-                       </div>
-                       <div class="panel-body">
-                           9/2/2016 - Jeopardy/Pizza
-                       </div>
-                       <div class="panel-body">
-                           9/9/2016 - Selenium presentation, automated UI testing
-                       </div>
-                       <div class="panel-body">
-                           9/16/2016 - Kirubel Drone Project 
-                       </div>
-                       <div class="panel-body">
-                           9/23/2016 - Suyash Firebase DB
-                       </div>
-                       <div class="panel-body">
-                           9/30/2016 - 
-                       </div>
-                       <div class="panel-body">
-                           10/7/2016
-                       </div>
-                       <div class="panel-body">
-                           10/14/2016
-                       </div>
-                       <div class="panel-body">
-                           10/21/2016 - Digikey Programming Competition
-                       </div>
-                       <div class="panel-body">
-                           10/28/2016 - Dr Anda
-                       </div>
-                       <div class="panel-body">
-                           11/4/2016 - Dr Zhao
-                       </div>
-		       <div class="panel-body">
-                           11/5/2016 - ACM Programming Competition
-                       </div>
-                       <div class="panel-body">
-                           11/11/2016
-                       </div>
-                       <div class="panel-body">
-                           11/18/2016
-                       </div>
-                       <div class="panel-body">
-                           11/25/2016
-                       </div>
-                       <div class="panel-body">
-                           12/2/2016
-                       </div>
-                       <div class="panel-body">
-                           12/9/2016
-                       </div>
-                       <div class="panel-body">
-                           12/16/2016
-                       </div>
-
-                   </div>
+                   <div id='calendar'></div>
+                   <br>
+                   <br>
                  </div>
                </div>
            </div>
        </div>
    </div
+   <link rel='stylesheet' href='/static/global/calendar/lib/cupertino/jquery-ui.min.css' />
+  <link href='/static/global/calendar/fullcalendar.min.css' rel='stylesheet' />
+  <link href='/static/global/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <script src='/static/global/calendar/lib/moment.min.js'></script>
+  <script src='/static/global/calendar/lib/jquery.min.js'></script>
+  <script src='/static/global/calendar/fullcalendar.min.js'></script>
+  <script src='/static/global/calendar/gcal.min.js'></script>
+  <script>
+
+    $(document).ready(function() {
+
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,listMonth'
+        },
+        defaultView: 'listMonth',
+        navLinks: true, // can click day/week names to navigate views
+        googleCalendarApiKey: 'AIzaSyAXAA_qOUDE3u-l-fXsF2qmYd_ddhLxFVY',
+        events: {
+               googleCalendarId: 'scsucsciclub@gmail.com'
+            },
+            eventClick: function(event) {
+          // opens events in a popup window
+          window.open(event.url, 'gcalevent', 'width=950,height=600');
+          return false;
+        },
+      });
+      
+    });
+
+  </script>
+  <style>
+
+    body {
+      margin: 40px 10px;
+      padding: 0;
+      font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+      font-size: 14px;
+    }
+
+    #calendar {
+      max-width: 750px;
+      margin: 0 auto;
+      background-color: #375a7f;
+      border-radius: 6px;
+    }
+
+  </style>
 {% endblock %}
