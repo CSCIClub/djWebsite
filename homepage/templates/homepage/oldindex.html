@@ -1,0 +1,42 @@
+{% extends "homepage/base.html" %}
+
+{% load news_extras %}
+{% load emails_extras %}
+{% load events_extras %}
+
+{% block content %}
+       <div class="row ">
+           <div class="col-md-6">
+               <div class="row">
+                 <div class="col-xs-12">
+                   {% show_signup %}
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-lg-12">
+
+                 </div>
+               </div>
+           </div>
+
+           <div class="col-md-6">
+               <div class="row">
+                 <div class="col-xs-12">
+                   <div class="panel panel-primary">
+                       <div class="panel-heading">
+                           <h3 class="panel-title">Upcoming Meeting!</h3>
+                       </div>
+                       <div class="panel-body">
+                           {% get_next_meeting %}
+                       </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-xs-12">
+                   {% show_feed %}
+                 </div>
+               </div>
+           </div>
+       </div>
+{% endblock %}
