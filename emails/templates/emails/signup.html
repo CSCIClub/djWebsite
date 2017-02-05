@@ -1,4 +1,9 @@
-<form class="form-horizontal" action="email/" method="post">
+{% block head %}
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'emails/js/submit.js' %}"></script>
+{% endblock %}
+
+<form id="subscribeForm" class="form-horizontal" action="email/subscribe/" method="post">
   <legend>Sign-up for our mailing list!</legend>
   <div class="form-group">
     <label for="id_email_address" class="col-lg-2 control-label">Email</label>
@@ -9,7 +14,6 @@
   </div>
   <div class="form-group">
     <div class="col-lg-10 col-lg-offset-2">
-      <button type="reset" class="btn btn-default">Cancel</button>
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>

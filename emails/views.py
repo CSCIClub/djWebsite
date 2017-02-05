@@ -1,26 +1,46 @@
+import json
+
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.db import IntegrityError
 
 from .forms import EmailForm
 from .models import Email
 
 
-# Create your views here.
 def index(request):
-    if request.method == 'POST':
-        form = EmailForm(request.POST)
-        if form.is_valid():
-            try:
-                e = Email(address=form.cleaned_data['email_address'])
-                e.save()
-            except IntegrityError:
-                pass
-            return HttpResponseRedirect('success/')
-    else:
-        form = EmailForm()
-
     return render(request, 'emails/index.html', {'form': form})
+
+
+def subscribe(request):
+    print(request.POST)
+    form = EmailForm(request.POST)
+    if form.is_valid():
+        try:
+            e = Email(address=form.cleaned_data['email_address'])
+            e.save()
+            msg = "success"
+        except IntegrityError:
+            msg = "failure"
+    else:
+        msg = "invalid"
+
+    return HttpResponse(json.dumps(msg), content_type='application/json')
+
+
+def unsubscribe(request):
+    form = EmailForm(request.POST)
+    if form.is_valid():
+        try:
+            e = Email(address=form.cleaned_data['email_address'])
+            e.save()
+            msg = "success"
+        except IntegrityError:
+            msg = "failure"
+    else:
+        msg = "invalid"
+
+    return HttpResponse(json.dumps(msg), content_type='application/json')
 
 
 def success(request):
