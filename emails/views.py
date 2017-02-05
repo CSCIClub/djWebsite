@@ -13,7 +13,6 @@ def index(request):
 
 
 def subscribe(request):
-    print(request.POST)
     form = EmailForm(request.POST)
     if form.is_valid():
         try:
